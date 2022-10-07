@@ -30,4 +30,17 @@ class ControllerShop extends BaseController
 
         return view('content/viewShop', $data);
     }
+
+    public function shopSingle($id)
+    {
+        $modelProduct = new modelProduct();
+        $product = $modelProduct->where('id', $id)->first();
+
+        $data = [
+            'title' => $product['title'],
+            'product' => $product
+        ];
+
+        return view('content/viewShopSingle', $data);
+    }
 }
