@@ -43,4 +43,17 @@ class ControllerShop extends BaseController
 
         return view('content/viewShopSingle', $data);
     }
+
+    public function cart()
+    {
+        $modelProduct = new modelProduct();
+        $listProduct = $modelProduct->findAll();
+
+        $data = [
+            'title' => 'Cart',
+            'listProduct' => $listProduct
+        ];
+
+        return view('content/viewCart', $data);
+    }
 }

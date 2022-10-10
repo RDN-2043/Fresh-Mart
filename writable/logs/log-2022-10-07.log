@@ -4846,3 +4846,531 @@ in APPPATH\Controllers\ControllerShop.php on line 40.
  4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:23 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:23 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:09:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:10:59 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:59 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:59 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:11:59 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:12:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:12:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:12:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:12:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:12:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:12:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:13:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'css', 'fontawesome.min.css')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:13:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-1.11.0.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:13:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'jquery-migrate-1.2.1.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:13:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'bootstrap.bundle.min.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:13:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'templatemo.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 14:13:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerShop.php on line 40.
+ 1 APPPATH\Controllers\ControllerShop.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerShop.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->shopSingle('FCPATH\\assets', 'js', 'custom.js')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

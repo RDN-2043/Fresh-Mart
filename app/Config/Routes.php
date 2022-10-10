@@ -39,6 +39,7 @@ $routes->get('/', 'ControllerShop::dashboard');
 $routes->get('/dashboard', 'ControllerShop::dashboard');
 $routes->get('/shop', 'ControllerShop::shop');
 $routes->get('/shop-single/(:any)', 'ControllerShop::shopSingle/$1');
+$routes->get('/cart', 'ControllerShop::cart');
 
 /*
  * --------------------------------------------------------------------
