@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2022 at 06:34 AM
+-- Generation Time: Oct 12, 2022 at 03:29 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -46,6 +46,8 @@ CREATE TABLE `migrations` (
 CREATE TABLE `table_product` (
   `id` int(5) NOT NULL,
   `title` varchar(256) NOT NULL,
+  `seller` varchar(256) NOT NULL,
+  `description` longtext NOT NULL,
   `available` int(3) NOT NULL,
   `star` int(1) NOT NULL,
   `price` int(12) NOT NULL,
@@ -56,9 +58,10 @@ CREATE TABLE `table_product` (
 -- Dumping data for table `table_product`
 --
 
-INSERT INTO `table_product` (`id`, `title`, `available`, `star`, `price`, `imgLink`) VALUES
-(1, 'Dongeng Si Kancil dan Hewan-Hewan Belantara', 1, 4, 50000, 'https://www.belbuk.com/images/products/buku/buku-anak/cerita-anak/5ad95710d99d2l.JPG'),
-(2, 'Timun Emas', 5, 3, 75000, 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1483661485l/33802302._SX318_.jpg');
+INSERT INTO `table_product` (`id`, `title`, `seller`, `description`, `available`, `star`, `price`, `imgLink`) VALUES
+(2, 'Timun Emas', 'Samsudin', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis tempus facilisis. Donec dui neque, vulputate quis malesuada et, feugiat non mauris. Nullam placerat gravida mauris, quis consectetur felis varius.', 5, 3, 75000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191795176915034/logo2.png'),
+(3, 'timun', 'Pak Ghofar', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis mattis eros, vitae laoreet nisl.', 3, 2, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794837172255/timun.png'),
+(4, 'Kangkung', 'Bu Haji', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis gravida auctor. Pellentesque venenatis velit nec velit facilisis maximus. Donec.', 2, 5, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794459684914/kangkung.png');
 
 --
 -- Indexes for dumped tables
@@ -90,7 +93,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
