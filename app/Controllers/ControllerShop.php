@@ -6,6 +6,24 @@ use App\Models\modelProduct;
 
 class ControllerShop extends BaseController
 {
+    public function signIn()
+    {
+        $data = [
+            'title' => 'Sign In'
+        ];
+
+        return view('content/viewSignIn', $data);
+    }
+
+    public function signUp()
+    {
+        $data = [
+            'title' => 'Sign Up'
+        ];
+
+        return view('content/viewSignUp', $data);
+    }
+
     public function dashboard()
     {
         $modelProduct = new modelProduct();

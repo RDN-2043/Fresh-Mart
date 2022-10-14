@@ -35,7 +35,9 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'ControllerShop::dashboard');
+$routes->get('/', 'ControllerShop::signIn');
+$routes->get('/signin', 'ControllerShop::signIn');
+$routes->get('/signup', 'ControllerShop::signUp');
 $routes->get('/dashboard', 'ControllerShop::dashboard');
 $routes->get('/shop', 'ControllerShop::shop');
 $routes->get('/shop-single/(:any)', 'ControllerShop::shopSingle/$1');

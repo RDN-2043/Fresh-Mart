@@ -87,7 +87,9 @@
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src=<?= $product['imgLink']; ?>>
+                                <div class="align-self-center" style="height: 200px; width: 200px;">
+                                    <img class="card-img rounded-0" src=<?= $product['imgLink']; ?>>
+                                </div>
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
@@ -153,75 +155,6 @@
             </a>
         </div>
         <!--End Controls-->
-
-        <!--Carousel Wrapper-->
-        <div class="col">
-            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
-                <!--Slides-->
-                <div class="carousel-inner product-links-wap" role="listbox">
-
-                    <!--First slide-->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End First slide-->
-
-                    <!--Second slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Second slide-->
-
-                    <!--Third slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                            </div>
-                            <div class="col-3 p-md-5">
-                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Third slide-->
-
-                </div>
-                <!--End Slides-->
-            </div>
-        </div>
-        <!--End Carousel Wrapper-->
 
         <!--Controls-->
         <div class="col-1 align-self-center">
