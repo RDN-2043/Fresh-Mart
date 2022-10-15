@@ -4,12 +4,6 @@ namespace App\Controllers;
 
 use App\Models\modelAccount;
 
-enum enumType
-{
-    case Seller;
-    case Customer;
-}
-
 class ControllerAccount extends BaseController
 {
     private $modelAccount;
@@ -24,7 +18,7 @@ class ControllerAccount extends BaseController
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-        
+
         session_destroy();
 
         $data = [
@@ -58,5 +52,16 @@ class ControllerAccount extends BaseController
         }
 
         echo "<script>alert('Username/Password is incorect!');window.location.href='signin';</script>";
+    }
+
+    public function signingUp()
+    {
+        $this->modelAccount->save([
+            'username' => $this->request->getVar('username'),
+            'password' => $this->request->getVar('password'),
+            'type' => $this->request->getVar('type')
+        ]);
+
+        return redirect()->to('/signin');
     }
 }

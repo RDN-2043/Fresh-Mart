@@ -46,6 +46,7 @@ $routes->get('/cart', 'ControllerShop::cart');
 $routes->get('/profile', 'ControllerShop::profile');
 
 $routes->post('/signingin', 'ControllerAccount::signingIn');
+$routes->post('/signingup', 'ControllerAccount::signingUp');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
