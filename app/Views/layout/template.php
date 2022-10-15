@@ -23,6 +23,21 @@
 </head>
 
 <body>
+    <?php
+    
+    use App\Models\modelProduct;
+
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
+    $account = null;
+    if(isset($_SESSION['account'])){
+        $account = $_SESSION['account'];
+    }
+    $modelProduct = new modelProduct();
+
+    ?>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
         <div class="container text-light">
@@ -82,16 +97,26 @@
                             </div>
                         </div>
                     </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
                     <a class="nav-icon position-relative text-decoration-none" href="<?= base_url('cart'); ?>">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        <?php
+                        $totalCart = 0;
+
+                        if (!empty($account)) {
+                            $totalCart = count($modelProduct->where('id_user', $account['id'])->findAll());
+                        }
+                        ?>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"><?= $totalCart; ?></span>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="<?= base_url('signin'); ?>">
+                    <?php
+                    if (empty($account)) {
+                        $redirectTo = "signin";
+                    } else {
+                        $redirectTo = "profile";
+                    }
+                    ?>
+                    <a class="nav-icon position-relative text-decoration-none" href="<?= base_url($redirectTo); ?>">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                     </a>
                 </div>
             </div>

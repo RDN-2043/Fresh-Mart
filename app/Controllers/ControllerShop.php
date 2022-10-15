@@ -6,61 +6,23 @@ use App\Models\modelProduct;
 
 class ControllerShop extends BaseController
 {
-    public function signIn()
+    private $modelProduct;
+
+    public function __construct()
     {
-        $data = [
-            'title' => 'Sign In'
-        ];
-
-        return view('content/viewSignIn', $data);
-    }
-
-    public function signUp()
-    {
-        $data = [
-            'title' => 'Sign Up'
-        ];
-
-        return view('content/viewSignUp', $data);
+        $this->modelProduct = new modelProduct();
     }
 
     public function dashboard()
     {
-        $modelProduct = new modelProduct();
-        $listProduct = $modelProduct->findAll();
-        $listBannerProduct = array();
-        $listBestProduct = array();
-        $listRandomProduct = array();
-
-        for($i = 0; $i < 3 && $i < count($listProduct);) {
-            $product = $listProduct[rand(0, count($listProduct) - 1)];
-
-            if(!in_array($product, $listBannerProduct)){
-                array_push($listBannerProduct, $product);
-                $i++;
-            }
-        }
-
-        foreach($listProduct as $product){
-            if(count($listBestProduct) >= 3){
-                break;
-            }
-
-            if($product['star'] >= 3) {
-                array_push($listBestProduct, $product);
-            }
-        }
-
-        for ($i = 0; $i < 3 && $i < count($listProduct); $i++) {
-            array_push($listRandomProduct, $listProduct[rand(0, count($listProduct) - 1)]);
-        }
+        $listProduct = $this->modelProduct->findAll();
 
         $data = [
             'title' => 'Dashboard',
             'listProduct' => $listProduct,
-            'listBannerProduct' => $listBannerProduct,
-            'listBestProduct' => $listBestProduct,
-            'listRandomProduct' => $listRandomProduct
+            'listBannerProduct' => $this->GetListBannerProduct($listProduct),
+            'listBestProduct' => $this->GetListBestProduct($listProduct),
+            'listRandomProduct' => $this->GetListRandomProduct($listProduct)
         ];
 
         return view('content/viewDashboard', $data);
@@ -68,8 +30,7 @@ class ControllerShop extends BaseController
 
     public function shop()
     {
-        $modelProduct = new modelProduct();
-        $listProduct = $modelProduct->findAll();
+        $listProduct = $this->modelProduct->findAll();
 
         $data = [
             'title' => 'Shop',
@@ -81,8 +42,7 @@ class ControllerShop extends BaseController
 
     public function shopSingle($id)
     {
-        $modelProduct = new modelProduct();
-        $product = $modelProduct->where('id', $id)->first();
+        $product = $this->modelProduct->where('id', $id)->first();
 
         $data = [
             'title' => $product['title'],
@@ -94,8 +54,7 @@ class ControllerShop extends BaseController
 
     public function cart()
     {
-        $modelProduct = new modelProduct();
-        $listProduct = $modelProduct->findAll();
+        $listProduct = $this->modelProduct->findAll();
 
         $data = [
             'title' => 'Cart',
@@ -103,5 +62,58 @@ class ControllerShop extends BaseController
         ];
 
         return view('content/viewCart', $data);
+    }
+
+    public function profile()
+    {
+        $data = [
+            'title' => 'Profile'
+        ];
+
+        return view('content/viewProfile', $data);
+    }
+
+    private function GetListBannerProduct($listProduct)
+    {
+        $listBannerProduct = array();
+
+        for ($i = 0; $i < 3 && $i < count($listProduct);) {
+            $product = $listProduct[rand(0, count($listProduct) - 1)];
+
+            if (!in_array($product, $listBannerProduct)) {
+                array_push($listBannerProduct, $product);
+                $i++;
+            }
+        }
+
+        return $listBannerProduct;
+    }
+
+    private function GetListBestProduct($listProduct)
+    {
+        $listBestProduct = array();
+
+        foreach ($listProduct as $product) {
+            if (count($listBestProduct) >= 3) {
+                break;
+            }
+
+            if ($product['star'] >= 3) {
+                array_push($listBestProduct, $product);
+            }
+        }
+
+        return $listBestProduct;
+    }
+
+    private function GetListRandomProduct($listProduct)
+    {
+        $listRandomProduct = array();
+
+        for ($i = 0; $i < 3 && $i < count($listProduct); $i++) {
+            array_push($listRandomProduct, $listProduct[rand(0, count($listProduct) - 1)]);
+        }
+
+        return $listRandomProduct;
     }
 }

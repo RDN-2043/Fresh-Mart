@@ -1,0 +1,36 @@
+CRITICAL - 2022-10-15 00:50:42 --> Undefined variable $listBannerProduct
+in APPPATH\Views\content\viewDashboard.php on line 25.
+ 1 APPPATH\Views\content\viewDashboard.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listBannerProduct', 'APPPATH\\Views\\content\\viewDashboard.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewDashboard', [], true)
+ 5 APPPATH\Controllers\ControllerAccount.php(54): view('content/viewDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerAccount->signingIn()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAccount))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-15 00:52:50 --> session_start(): Ignoring session_start() because a session is already active
+in APPPATH\Views\layout\template.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'session_start(): Ignoring session_start() because a session is already active', 'APPPATH\\Views\\layout\\template.php', 30)
+ 2 APPPATH\Views\layout\template.php(30): session_start()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\template.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/template', [], true)
+ 6 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewDashboard', [], true)
+ 7 APPPATH\Controllers\ControllerShop.php(28): view('content/viewDashboard', [...])
+ 8 APPPATH\Controllers\ControllerAccount.php(53): App\Controllers\ControllerShop->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerAccount->signingIn()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAccount))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-15 01:54:58 --> session_destroy(): Trying to destroy uninitialized session
+in APPPATH\Controllers\ControllerAccount.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'APPPATH\\Controllers\\ControllerAccount.php', 24)
+ 2 APPPATH\Controllers\ControllerAccount.php(24): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerAccount->signIn()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAccount))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

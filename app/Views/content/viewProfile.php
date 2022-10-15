@@ -24,8 +24,7 @@
                         <p class="text-muted mb-1">Full Stack Developer</p>
                         <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                         <div class="d-flex justify-content-center mb-2">
-                            <button type="button" class="btn btn-primary">Follow</button>
-                            <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+                            <a class="btn btn-primary" href="<?= base_url('/signin'); ?>">Sign Out</a>
                         </div>
                     </div>
                 </div>
