@@ -1,6 +1,21 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+<script>
+    var qty = 0;
+
+    function BtnQuantityIncrease() {
+        qty++;
+
+        document.getElementById('quantity').value = qty;
+    }
+
+    function BtnQuantityDecrease() {
+        qty--;
+
+        document.getElementById('quantity').value = qty;
+    }
+</script>
 <section class="bg-light">
     <div class="container pb-5">
         <div class="row">
@@ -16,16 +31,21 @@
                         <h1 class="h2"><?= $product['title']; ?></h1>
                         <p class="h3 py-2">Rp.<?= $product['price']; ?></p>
                         <p class="py-2">
-                            <i class="fa fa-star text-warning"></i>
-                            <i class="fa fa-star text-warning"></i>
-                            <i class="fa fa-star text-warning"></i>
-                            <i class="fa fa-star text-warning"></i>
-                            <i class="fa fa-star text-secondary"></i>
+                            <?php
+                            $star = $product['star'] - 1;
+                            for ($i = 0; $i < 5; $i++) {
+                                if ($star < $i) {
+                                    echo "<i class='text-muted fa fa-star'></i>";
+                                } else {
+                                    echo "<i class='text-warning fa fa-star'></i>";
+                                }
+                            }
+                            ?>
                             <span class="list-inline-item text-dark">Rating : <?= $product['star']; ?></span>
                         </p>
                         <ul class="list-inline">
                             <li class="list-inline-item">
-                                <h6>Brand :</h6>
+                                <h6>Seller :</h6>
                             </li>
                             <li class="list-inline-item">
                                 <p class="text-muted"><strong><?= $product['seller']; ?></strong></p>
@@ -44,9 +64,9 @@
                                             Quantity
                                             <input type="hidden" name="product-quanity" id="product-quanity" value="1">
                                         </li>
-                                        <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
-                                        <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
-                                        <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
+                                        <li class="list-inline-item"><button onclick="BtnQuantityDecrease();" class="btn btn-success">-</button></li>
+                                        <li class="list-inline-item"><input class="badge bg-secondary" id="quantity" type="text" name="quantity" value="0">0</input></li>
+                                        <li class="list-inline-item"><button onclick="BtnQuantityIncrease();" class="btn btn-success">+</button></li>
                                     </ul>
                                 </div>
                             </div>

@@ -24,18 +24,25 @@
 
 <body>
     <?php
-    
+
+    use App\Models\modelCart;
     use App\Models\modelProduct;
+
+    $modelProduct = new modelProduct();
+    $modelCart = new modelCart();
+    $account = null;
 
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
-    
-    $account = null;
+
     if(isset($_SESSION['account'])){
         $account = $_SESSION['account'];
     }
-    $modelProduct = new modelProduct();
+
+    if (!empty($account) && $account['type'] == "Customer") {
+        $listCartProduct = $modelCart->where('id_customer', $account['id'])->findAll();
+    }
 
     ?>
     <!-- Start Top Nav -->
@@ -99,14 +106,7 @@
                     </div>
                     <a class="nav-icon position-relative text-decoration-none" href="<?= base_url('cart'); ?>">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <?php
-                        $totalCart = 0;
-
-                        if (!empty($account)) {
-                            $totalCart = count($modelProduct->where('id_user', $account['id'])->findAll());
-                        }
-                        ?>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"><?= $totalCart; ?></span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"><?php if(!empty($listCartProduct)){ count($listCartProduct); }?></span>
                     </a>
                     <?php
                     if (empty($account)) {
@@ -164,8 +164,7 @@
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><a class="text-decoration-none" href="#">Home</a></li>
                         <li><a class="text-decoration-none" href="#">About Us</a></li>
-                        <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                        <li><a class="text-decoration-none" href="#">Shop</a></li>
                         <li><a class="text-decoration-none" href="#">Contact</a></li>
                     </ul>
                 </div>
@@ -191,13 +190,6 @@
                             <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
                         </li>
                     </ul>
-                </div>
-                <div class="col-auto">
-                    <label class="sr-only" for="subscribeEmail">Email address</label>
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
-                    </div>
                 </div>
             </div>
         </div>
