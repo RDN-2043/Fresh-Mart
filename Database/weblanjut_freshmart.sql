@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2022 at 04:50 PM
+-- Generation Time: Oct 20, 2022 at 01:49 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -47,16 +47,34 @@ CREATE TABLE `table_account` (
   `id` int(5) NOT NULL,
   `username` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL,
-  `type` enum('seller','customer','','') NOT NULL
+  `type` enum('Seller','Customer','','') NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `deleted_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `table_account`
 --
 
-INSERT INTO `table_account` (`id`, `username`, `password`, `type`) VALUES
-(1, 'seller1', 'seller1', 'seller'),
-(2, 'customer1', 'customer1', 'customer');
+INSERT INTO `table_account` (`id`, `username`, `password`, `type`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(3, 'seller1', 'seller1', 'Seller', '2022-10-15 02:45:31', '2022-10-15 02:45:31', '2022-10-15 02:45:31'),
+(4, 'customer1', 'customer1', 'Customer', '2022-10-15 02:45:31', '2022-10-15 02:45:31', '2022-10-15 02:45:31'),
+(5, 'customer2', 'customer2', 'Seller', '2022-10-15 08:13:18', '2022-10-15 08:13:18', '0000-00-00 00:00:00'),
+(6, 'seller2', 'seller2', 'Seller', '2022-10-15 16:39:36', '2022-10-15 16:39:36', '2022-10-15 16:39:36'),
+(7, 'seller3', 'seller3', 'Seller', '2022-10-15 16:39:36', '2022-10-15 16:39:36', '2022-10-15 16:39:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_cart`
+--
+
+CREATE TABLE `table_cart` (
+  `id_product` int(5) NOT NULL,
+  `id_customer` int(5) NOT NULL,
+  `total` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -73,15 +91,20 @@ CREATE TABLE `table_product` (
   `star` int(1) NOT NULL,
   `price` int(12) NOT NULL,
   `imgLink` varchar(256) NOT NULL,
-  `id_user` int(5) NOT NULL
+  `id_seller` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `table_product`
 --
 
-INSERT INTO `table_product` (`id`, `title`, `seller`, `description`, `available`, `star`, `price`, `imgLink`, `id_user`) VALUES
-(12, 'timun', 'Rohman', 'Desc', 2, 4, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794837172255/timun.png', 1);
+INSERT INTO `table_product` (`id`, `title`, `seller`, `description`, `available`, `star`, `price`, `imgLink`, `id_seller`) VALUES
+(15, 'Timun', 'Pak Rohmat', 'Desc 1', 2, 3, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794837172255/timun.png', 3),
+(17, 'Kangkung', 'Bu Sofyan', 'Desc 2', 2, 4, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794459684914/kangkung.png', 6),
+(18, 'Kol', 'Bu Rohmah', 'Desc 3', 5, 3, 25000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794023477298/kol.png', 7),
+(19, 'Sawi', 'Pak Rohmat', 'Desc 4', 3, 3, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191793679540344/sawi.jpg', 3),
+(20, 'Sayur Asem', 'Bu Sofyan', 'Desc 5', 5, 3, 25000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191793406918716/sayur_asem.jpg', 6),
+(21, 'Rendang', 'Pak Rohmat', 'Desc 6', 3, 5, 75000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191793104920586/rendang.jpg', 3);
 
 --
 -- Indexes for dumped tables
@@ -100,11 +123,17 @@ ALTER TABLE `table_account`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `table_cart`
+--
+ALTER TABLE `table_cart`
+  ADD UNIQUE KEY `id_product` (`id_product`);
+
+--
 -- Indexes for table `table_product`
 --
 ALTER TABLE `table_product`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_user` (`id_user`);
+  ADD KEY `fk_seller` (`id_seller`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -120,23 +149,29 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `table_account`
 --
 ALTER TABLE `table_account`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `table_cart`
+--
+ALTER TABLE `table_cart`
+  ADD CONSTRAINT `table_cart_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `table_product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `table_product`
 --
 ALTER TABLE `table_product`
-  ADD CONSTRAINT `table_product_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `table_account` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_seller` FOREIGN KEY (`id_seller`) REFERENCES `table_account` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
