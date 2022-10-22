@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2022 at 01:49 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Oct 20, 2022 at 02:47 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -99,12 +99,21 @@ CREATE TABLE `table_product` (
 --
 
 INSERT INTO `table_product` (`id`, `title`, `seller`, `description`, `available`, `star`, `price`, `imgLink`, `id_seller`) VALUES
-(15, 'Timun', 'Pak Rohmat', 'Desc 1', 2, 3, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794837172255/timun.png', 3),
-(17, 'Kangkung', 'Bu Sofyan', 'Desc 2', 2, 4, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794459684914/kangkung.png', 6),
-(18, 'Kol', 'Bu Rohmah', 'Desc 3', 5, 3, 25000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191794023477298/kol.png', 7),
-(19, 'Sawi', 'Pak Rohmat', 'Desc 4', 3, 3, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191793679540344/sawi.jpg', 3),
-(20, 'Sayur Asem', 'Bu Sofyan', 'Desc 5', 5, 3, 25000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191793406918716/sayur_asem.jpg', 6),
-(21, 'Rendang', 'Pak Rohmat', 'Desc 6', 3, 5, 75000, 'https://cdn.discordapp.com/attachments/776404266767745034/1029191793104920586/rendang.jpg', 3);
+(3, 'Ayam Krispy', 'Pak Rohmat', 'Kfc, MCD, AW??, Lewat boss, punya kami adalah yang terbaik!', 10, 5, 10000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259155332976640/Ayam_krispi.png', 3),
+(6, 'Bayem', 'Bu Sofyan', 'Ayo dapatkan sayur dengan harga murah untuk setiap pembeli yang membeli di toko kami.', 10, 4, 4000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259156020826113/bayem.png', 6),
+(7, 'Ayam Goreng', 'Bu Rohmah', 'Terjual ribuan, ayam goreng ini terbukti bikin ketagihan.', 13, 4, 12000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259154770919434/ayam_goreng.png', 7),
+(8, 'Brokoli', 'Bu Sofyan', 'Ayo dapatkan sayur dengan harga murah untuk setiap pembeli yang membeli di toko kami.', 9, 3, 10000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259156478001233/brokoli.png', 6),
+(10, 'Jagung Manis', 'Bu Rohmah', 'Beli sayur di toko kami, satu-satunya toko yang menjual sayur dengan fresh, sesuai dengan nama toko kami.', 10, 4, 7200, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259215890325524/Jagung_Manis.png\r\n', 7),
+(11, 'Labusiem', 'Bu Rohmah', 'Kesempatan terbatas, cuma hari ini! Promo sayur ini, hanya di toko kami.', 13, 3, 4000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259215496069160/Labusiem.png', 7),
+(12, 'Jahe', 'Pak Rohmat', 'Jahe merupakan obat sekaligus rempah - rempah yang sangat baik, mari beli di toko kami.\r\n', 17, 4, 3500, 'Jahe merupakan obat sekaligus rempah - rempah yang sangat baik, mari beli di toko kami.\r\n', 3),
+(14, 'Jamur ', 'Bu Sofyan', 'Ayo dapatkan jamur dengan harga murah untuk kalian masak dirumah.\r\n', 18, 5, 2500, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259216838246410/Jamur.png', 6),
+(15, 'Timun', 'Pak Rohmat', 'Timun merupakan sayur banyak mengandung mineral, jadi tunggu apalagi, mari beli!', 2, 3, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259344806453298/Timun.png', 3),
+(17, 'Kangkung', 'Bu Sofyan', 'Tidak usah ragukan kualitas sayur ditempat kami, mari beli!', 2, 4, 3500, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259217740025966/kangkung.png', 6),
+(18, 'Kol', 'Bu Rohmah', 'Kol terbaik hanya ada di toko kami.', 5, 3, 5000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259215114383370/Kol.png', 7),
+(19, 'Sawi Hijau', 'Pak Rohmat', 'Sawi hijau bisa dipakaikan mie ayam kalian agar menjadi, mie ayam terbaik seluruh Indonesia.', 3, 3, 4000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259303576457226/sawi.png', 3),
+(20, 'Ayam Bakar', 'Bu Sofyan', 'Ayam bakar kami merupakan ayam yang paling enak diantara toko lain, mari coba!', 5, 3, 25000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259153466503228/ayam_bakar.png', 6),
+(21, 'Rendang', 'Pak Rohmat', 'Rendang merupakan lauk terenak dan terlezat, ayo coba ditoko kami.', 3, 5, 75000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259302628540476/rendang.png', 3),
+(56, 'Ayam Kremes Cabe Ijo', 'Bu Sofyan', 'Ayam Kremes Cabe Ijo kami merupakan ayam terlezat di tahun 2022 ini!', 10, 3, 15000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259154179530762/Ayam_cabe_ijo.png', 6);
 
 --
 -- Indexes for dumped tables
@@ -155,7 +164,7 @@ ALTER TABLE `table_account`
 -- AUTO_INCREMENT for table `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- Constraints for dumped tables
