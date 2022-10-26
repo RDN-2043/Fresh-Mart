@@ -1,0 +1,25 @@
+CRITICAL - 2022-10-20 00:07:02 --> Array to string conversion
+in APPPATH\Views\layout\template.php on line 109.
+ 1 APPPATH\Views\layout\template.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\layout\\template.php', 109)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewCart', [], true)
+ 6 APPPATH\Controllers\ControllerShop.php(64): view('content/viewCart', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->cart()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-20 00:08:34 --> Undefined property: CodeIgniter\View\View::$modelProduct
+in APPPATH\Views\content\viewCart.php on line 48.
+ 1 APPPATH\Views\content\viewCart.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$modelProduct', 'APPPATH\\Views\\content\\viewCart.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewCart.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewCart', [], true)
+ 5 APPPATH\Controllers\ControllerShop.php(64): view('content/viewCart', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->cart()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

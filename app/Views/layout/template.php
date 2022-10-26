@@ -27,9 +27,11 @@
 
     use App\Models\modelCart;
     use App\Models\modelProduct;
+    use App\Models\modelShipped;
 
     $modelProduct = new modelProduct();
     $modelCart = new modelCart();
+    $modelShipped = new modelShipped();
     $account = null;
 
     if (session_status() === PHP_SESSION_NONE) {
@@ -38,10 +40,6 @@
 
     if(isset($_SESSION['account'])){
         $account = $_SESSION['account'];
-    }
-
-    if (!empty($account) && $account['type'] == "Customer") {
-        $listCartProduct = $modelCart->where('id_customer', $account['id'])->findAll();
     }
 
     ?>
@@ -104,9 +102,20 @@
                             </div>
                         </div>
                     </div>
-                    <a class="nav-icon position-relative text-decoration-none" href="<?= base_url('cart'); ?>">
+                    <?php
+                    if(!empty($account)){
+                        if($account['type'] == 'Customer'){
+                            $redirectTo = 'shop';
+                        }else{
+                            $redirectTo = 'stock';
+                        }
+                    }else {
+                        $redirectTo = 'shop';
+                    }
+                    ?>
+                    <a class="nav-icon position-relative text-decoration-none" href="<?= base_url($redirectTo); ?>">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"><?php if(!empty($listCartProduct)){ count($listCartProduct); }?></span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"><?php if(!empty($listCartProduct)){ echo count($listCartProduct); }?></span>
                     </a>
                     <?php
                     if (empty($account)) {

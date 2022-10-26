@@ -2,15 +2,21 @@
 
 namespace App\Controllers;
 
+use App\Models\modelCart;
 use App\Models\modelProduct;
+use App\Models\modelShipped;
 
 class ControllerShop extends BaseController
 {
     private $modelProduct;
+    private $modelCart;
+    private $modelShipped;
 
     public function __construct()
     {
         $this->modelProduct = new modelProduct();
+        $this->modelCart = new modelCart();
+        $this->modelShipped = new modelShipped();
     }
 
     public function dashboard()
@@ -22,19 +28,22 @@ class ControllerShop extends BaseController
             'listProduct' => $listProduct,
             'listBannerProduct' => $this->GetListBannerProduct($listProduct),
             'listBestProduct' => $this->GetListBestProduct($listProduct),
-            'listRandomProduct' => $this->GetListRandomProduct($listProduct)
+            'listRandomProduct' => $this->GetListRandomProduct($listProduct),
+            'listCartProduct' => $this->GetListCartProduct()
         ];
 
         return view('content/viewDashboard', $data);
     }
 
-    public function shop()
+    public function shop($type)
     {
         $listProduct = $this->modelProduct->findAll();
 
         $data = [
             'title' => 'Shop',
-            'listProduct' => $listProduct
+            'listProduct' => $listProduct,
+            'type' => $type,
+            'listCartProduct' => $this->GetListCartProduct()
         ];
 
         return view('content/viewShop', $data);
@@ -46,7 +55,8 @@ class ControllerShop extends BaseController
 
         $data = [
             'title' => $product['title'],
-            'product' => $product
+            'product' => $product,
+            'listCartProduct' => $this->GetListCartProduct()
         ];
 
         return view('content/viewShopSingle', $data);
@@ -58,7 +68,8 @@ class ControllerShop extends BaseController
 
         $data = [
             'title' => 'Cart',
-            'listProduct' => $listProduct
+            'listProduct' => $listProduct,
+            'listCartProduct' => $this->GetListCartProduct()
         ];
 
         return view('content/viewCart', $data);
@@ -67,10 +78,53 @@ class ControllerShop extends BaseController
     public function profile()
     {
         $data = [
-            'title' => 'Profile'
+            'title' => 'Profile',
+            'listCartProduct' => $this->GetListCartProduct()
         ];
 
         return view('content/viewProfile', $data);
+    }
+
+    public function stock()
+    {
+        $data = [
+            'title' => 'Product Stock',
+            'listCartProduct' => $this->GetListCartProduct()
+        ];
+
+        return view('content/viewProductStock', $data);
+    }
+
+    private function GetListCartProduct(){
+        $listCartProduct = null;
+
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_SESSION['account'])) {
+            $account = $_SESSION['account'];
+        }
+
+        if (!empty($account)) {
+            if ($account['type'] == "Customer") {
+                $this->modelCart->where('id_customer', $account['id'], 'shipped', 0);
+                $listCartProduct = $this->modelCart->findAll();
+            } else {
+                $listShipped = $this->modelShipped->where('delivered', 0)->findAll();
+                $listCartProduct = array();
+
+                foreach ($listShipped as $shipped) {
+                    $cart = $this->modelCart->where('id', $shipped['id_cart'])->first();
+                    $product = $this->modelProduct->where('id', $cart['id_product'])->first();
+                    if ($product['id_seller'] == $account['id']) {
+                        array_push($listCartProduct, $cart);
+                    }
+                }
+            }
+        }
+
+        return $listCartProduct;
     }
 
     private function GetListBannerProduct($listProduct)

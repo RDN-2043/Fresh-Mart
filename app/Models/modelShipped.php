@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class modelAccount extends Model
+class modelShipped extends Model
 {
-    protected $table = "table_account";
-    protected $allowedFields = ['name', 'username', 'password', 'type'];
+    protected $table = "table_shipped";
+    protected $allowedFields = ['id_cart', 'delivered'];
 
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';

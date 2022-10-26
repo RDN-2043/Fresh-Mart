@@ -20,7 +20,14 @@
 <div class="container py-5">
     <div class="row">
         <div class="row">
-            <?php foreach ($listProduct as $product) : ?>
+            <?php
+            foreach ($listProduct as $product) :
+                if(!empty($type)){
+                    if($product['type'] != $type){
+                        continue;
+                    }
+                }
+            ?>
                 <div class="col-md-4">
                     <div class="card mb-4 product-wap rounded-0">
                         <div class="card rounded-0">

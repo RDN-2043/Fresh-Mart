@@ -42,7 +42,14 @@ class ControllerAccount extends BaseController
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
 
-        $account = $this->modelAccount->where('username', $username, 'password', $password)->first();
+        $listAccount = $this->modelAccount->where('username', $username)->findAll();
+
+        foreach($listAccount as $user){
+            if(password_verify($password, $user['password'])){
+                $account = $user;
+                break;
+            }
+        }
 
         if(!empty($account)) {
             session_start();
@@ -57,8 +64,9 @@ class ControllerAccount extends BaseController
     public function signingUp()
     {
         $this->modelAccount->save([
+            'name' => $this->request->getVar('name'),
             'username' => $this->request->getVar('username'),
-            'password' => $this->request->getVar('password'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
             'type' => $this->request->getVar('type')
         ]);
 

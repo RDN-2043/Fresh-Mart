@@ -1,6 +1,28 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+<?php
+
+use App\Models\modelCart;
+use App\Models\modelProduct;
+
+$modelProduct = new modelProduct();
+$modelCart = new modelCart();
+$account = null;
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['account'])) {
+    $account = $_SESSION['account'];
+}
+
+if (!empty($account) && $account['type'] == "Customer") {
+    $listCartProduct = $modelCart->where('id_customer', $account['id'])->findAll();
+}
+
+?>
 <section class="vh-100">
     <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -8,7 +30,7 @@
                 <p><span class="h2">Shopping Cart </span><span class="h4">(
                         <?php
                         if (!empty($listCartProduct)) {
-                            count($listCartProduct);
+                            echo count($listCartProduct);
                         } else {
                             echo "0";
                         }
@@ -23,7 +45,7 @@
 
                             if (!empty($listCartProduct)) :
                                 foreach ($listCartProduct as $productCart) :
-                                    $product = $this->modelProduct->where('id', $productCart['id_product'])->first();
+                                    $product = $modelProduct->where('id', $productCart['id_product'])->first();
                                     $totalPrice = $product['price'] * $productCart['total'];
                                     $totalCartPrice = $totalCartPrice + $totalPrice;
                             ?>
@@ -83,11 +105,10 @@
 
                 <div class="d-flex justify-content-end">
                     <?php
-                    if(empty($account)){
+                    if (empty($account)) {
                         $redirectTo = "signin";
                         $name = "Sign In to Continue Shoping";
-                    }
-                    else {
+                    } else {
                         $redirectTo = "shop";
                         $name = "Continue Shopping";
                     }

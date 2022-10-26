@@ -13,20 +13,19 @@
 
 									<div class="text-center mb-5">
 										<img src="https://cdn.discordapp.com/attachments/776404266767745034/1032263055071002624/logo-freshmart.png" style="width: 185px;" alt="logo">
-										
 									</div>
 
 									<form action="<?= base_url('signingin'); ?>" method="post">
 										<p>Please login to your account</p>
 
 										<div class="form-outline mb-4">
-											<input type="username" name="username" id="form2Example11" class="form-control" placeholder="Phone number or email address" />
 											<label class="form-label" for="form2Example11">Username</label>
+											<input type="username" name="username" id="form2Example11" class="form-control" placeholder="Phone number or email address" />
 										</div>
 
 										<div class="form-outline mb-4">
-											<input type="password" name="password" id="form2Example22" class="form-control" />
 											<label class="form-label" for="form2Example22">Password</label>
+											<input type="password" name="password" id="form2Example22" class="form-control" />
 										</div>
 
 										<div class="form-outline mb-4">

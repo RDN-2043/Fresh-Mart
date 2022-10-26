@@ -14,13 +14,18 @@
 								<form action="<?= base_url('signingup'); ?>" method="post">
 
 									<div class="form-outline mb-4">
-										<input type="username" name="username" id="form3Example3cg" class="form-control form-control-lg" />
-										<label class="form-label" for="form3Example3cg">Username</label>
+										<label class="form-label" for="form3Example3cg">Name</label>
+										<input type="text" name="name" id="form3Example3cg" class="form-control form-control-lg" />
 									</div>
 
 									<div class="form-outline mb-4">
-										<input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" />
+										<label class="form-label" for="form3Example3cg">Username</label>
+										<input type="username" name="username" id="form3Example3cg" class="form-control form-control-lg" />
+									</div>
+
+									<div class="form-outline mb-4">
 										<label class="form-label" for="form3Example4cg">Password</label>
+										<input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" />
 									</div>
 
 									<div class="form-outline mb-4">
