@@ -76,9 +76,9 @@
     <div class="row">
         <?php foreach ($listBestProduct as $product) : ?>
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="<?= $product['imgLink']; ?>" class="rounded-circle img-fluid border"></a>
+                <a href="<?= base_url('shop-single/' . $product['id']); ?>"><img src="<?= $product['imgLink']; ?>" class="rounded-circle img-fluid border"></a>
                 <h5 class="text-center mt-3 mb-3"><?= $product['title']; ?></h5>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                <p class="text-center"><a class="btn btn-success" href="<?= base_url('shop-single/' . $product['id']); ?>">Go Shop</a></p>
             </div>
         <?php endforeach;  ?>
     </div>
@@ -101,17 +101,17 @@
             <?php foreach ($listRandomProduct as $product) : ?>
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
+                        <a href="<?= base_url('shop-single/' . $product['id']); ?>">
                             <img src="<?= $product['imgLink']; ?>" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li>
                                     <?php
-                                    for($i = 0; $i < 5; $i++){
-                                        if($i < $product['star']){
+                                    for ($i = 0; $i < 5; $i++) {
+                                        if ($i < $product['star']) {
                                             echo "<i class='text-warning fa fa-star'></i>";
-                                        }else{
+                                        } else {
                                             echo "<i class='text-muted fa fa-star'></i>";
                                         }
                                     }
@@ -119,7 +119,7 @@
                                 </li>
                                 <li class="text-muted text-right">Rp. <?= $product['price']; ?></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark"><?= $product['title']; ?></a>
+                            <a href="<?= base_url('shop-single/' . $product['id']); ?>" class="h2 text-decoration-none text-dark"><?= $product['title']; ?></a>
                             <p class="card-text">
                                 <?= $product['description']; ?>
                             </p>

@@ -38,7 +38,7 @@
         session_start();
     }
 
-    if(isset($_SESSION['account'])){
+    if (isset($_SESSION['account'])) {
         $account = $_SESSION['account'];
     }
 
@@ -103,19 +103,31 @@
                         </div>
                     </div>
                     <?php
-                    if(!empty($account)){
-                        if($account['type'] == 'Customer'){
+                    if (!empty($account)) {
+                        if ($account['type'] == 'Customer') {
                             $redirectTo = 'shop';
-                        }else{
+                        } else {
                             $redirectTo = 'stock';
                         }
-                    }else {
+                    } else {
                         $redirectTo = 'shop';
                     }
                     ?>
                     <a class="nav-icon position-relative text-decoration-none" href="<?= base_url($redirectTo); ?>">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"><?php if(!empty($listCartProduct)){ echo count($listCartProduct); }?></span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+                            <?php
+                            if ($account['type'] == "Customer") {
+                                if(!empty($listCartProduct)) {
+                                    echo count($listCartProduct);
+                                }
+                            } else if ($account['type'] == "Seller") {
+                                if (!empty($listShippedProduct)) {
+                                    echo count($listShippedProduct);
+                                }
+                            }
+                            ?>
+                        </span>
                     </a>
                     <?php
                     if (empty($account)) {
@@ -162,19 +174,19 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Fresh Vegetable</a></li>
-                        <li><a class="text-decoration-none" href="#">Cooked Vegetable</a></li>
-                        <li><a class="text-decoration-none" href="#">Side Dishes</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url('shop/Fresh'); ?>">Fresh Vegetable</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url('shop/Coocked'); ?>">Cooked Vegetable</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url('shop/Side'); ?>">Side Dishes</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Home</a></li>
-                        <li><a class="text-decoration-none" href="#">About Us</a></li>
-                        <li><a class="text-decoration-none" href="#">Shop</a></li>
-                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url('dashboard'); ?>">Home</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url(); ?>">About Us</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url('shop'); ?>">Shop</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url(); ?>">Contact</a></li>
                     </ul>
                 </div>
 

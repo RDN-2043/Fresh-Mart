@@ -16,6 +16,11 @@
         document.getElementById('quantity').value = qty;
     }
 </script>
+<?php
+use App\Models\modelAccount;
+
+$modelAccount = new modelAccount();
+?>
 <section class="bg-light">
     <div class="container pb-5">
         <div class="row">
@@ -24,7 +29,6 @@
                     <img class="card-img img-fluid" src="<?= $product['imgLink']; ?>" alt="Card image cap" id="product-detail">
                 </div>
             </div>
-            <!-- col end -->
             <div class="col-lg-7 mt-5">
                 <div class="card">
                     <div class="card-body">
@@ -48,14 +52,15 @@
                                 <h6>Seller :</h6>
                             </li>
                             <li class="list-inline-item">
-                                <p class="text-muted"><strong><?= $product['seller']; ?></strong></p>
+                                <?php
+                                $name = $modelAccount->where('id', $product['id_seller'])->first()['name'];
+                                ?>
+                                <p class="text-muted"><strong><?= $name; ?></strong></p>
                             </li>
                         </ul>
-
                         <h6>Description:</h6>
                         <p><?= $product['description']; ?></p>
-
-                        <form action="" method="GET">
+                        <form action="" method="post">
                             <input type="hidden" name="product-title" value="Activewear">
                             <div class="row">
                                 <div class="col-auto">
@@ -72,25 +77,19 @@
                             </div>
                             <div class="row pb-3">
                                 <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Buy</button>
-                                </div>
-                                <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Add To Cart</button>
+                                    <button type="submit" class="btn btn-success btn-lg" name="submit">Add To Cart</button>
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Close Content -->
 
 <?= $this->endSection(); ?>
 
-<!-- Start Slider Script -->
 <script src="/assets/js/slick.min.js"></script>
 <script>
     $('#carousel-related-product').slick({
@@ -123,4 +122,3 @@
         ]
     });
 </script>
-<!-- End Slider Script -->

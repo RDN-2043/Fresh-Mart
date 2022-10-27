@@ -89,10 +89,44 @@ class ControllerShop extends BaseController
     {
         $data = [
             'title' => 'Product Stock',
+            'listShippedProduct' => $this->GetListShipped(),
             'listCartProduct' => $this->GetListCartProduct()
         ];
 
         return view('content/viewProductStock', $data);
+    }
+
+    public function addProduct()
+    {
+        $data = [
+            'title' => 'Add Product'
+        ];
+
+        return view('content/viewAddProduct', $data);
+    }
+
+    public function addNewProduct()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_SESSION['account'])) {
+            $account = $_SESSION['account'];
+        }
+
+        $this->modelProduct->save([
+            'title' => $this->request->getVar('title'),
+            'description' => $this->request->getVar('desc'),
+            'type' => $this->request->getVar('type'),
+            'available' => $this->request->getVar('qty'),
+            'star' => 0,
+            'price' => $this->request->getVar('price'),
+            'imgLink' => $this->request->getVar('imgLink'),
+            'id_seller' => $account['id']
+        ]);
+
+        return redirect()->to('/stock');
     }
 
     private function GetListCartProduct(){
@@ -106,21 +140,39 @@ class ControllerShop extends BaseController
             $account = $_SESSION['account'];
         }
 
-        if (!empty($account)) {
-            if ($account['type'] == "Customer") {
-                $this->modelCart->where('id_customer', $account['id'], 'shipped', 0);
-                $listCartProduct = $this->modelCart->findAll();
-            } else {
-                $listShipped = $this->modelShipped->where('delivered', 0)->findAll();
-                $listCartProduct = array();
+        if (!empty($account))
+        {
+            if ($account['type'] == "Customer")
+            {
+                $listCartProduct = $this->modelCart->where('id_customer', $account['id'], 'shipped', 0)->findAll();
+            }
+            else
+            {
+                $listCartProduct = $this->modelProduct->where('id_seller', $account['id'])->findAll();
+            }
+        }
 
-                foreach ($listShipped as $shipped) {
-                    $cart = $this->modelCart->where('id', $shipped['id_cart'])->first();
-                    $product = $this->modelProduct->where('id', $cart['id_product'])->first();
-                    if ($product['id_seller'] == $account['id']) {
-                        array_push($listCartProduct, $cart);
-                    }
-                }
+        return $listCartProduct;
+    }
+
+    private function GetListShipped()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_SESSION['account'])) {
+            $account = $_SESSION['account'];
+        }
+
+        $listShipped = $this->modelShipped->where('delivered', 0)->findAll();
+        $listCartProduct = array();
+
+        foreach ($listShipped as $shipped) {
+            $cart = $this->modelCart->where('id', $shipped['id_cart'])->first();
+            $product = $this->modelProduct->where('id', $cart['id_product'])->first();
+            if ($product['id_seller'] == $account['id']) {
+                array_push($listCartProduct, $cart);
             }
         }
 

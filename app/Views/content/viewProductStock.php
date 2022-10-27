@@ -14,7 +14,7 @@ $modelShipped = new modelShipped();
 ?>
 <br>
 <div class="d-flex justify-content-end">
-  <a class="btn btn-success btn-rounded" href="">+Add New Product</a>
+  <a class="btn btn-success btn-rounded" href="<?= base_url('addproduct'); ?>">+Add New Product</a>
 </div>
 <br>
 <div class="table-responsive">
@@ -33,11 +33,12 @@ $modelShipped = new modelShipped();
     <tbody>
       <tr class="table-warning">
         <?php
-        foreach ($listCartProduct as $cart) :
-          $product = $modelProduct->where('id', $cart['id_product'])->first();
-          $customer = $modelAccount->where('id', $cart['id_customer'])->first();
-          $shipped = $modelShipped->where('id', $cart['shipped'])->first();
-          $price = $cart['total'] * $product['price'];
+        if (!empty($listShippedProduct)) :
+          foreach ($listShippedProduct as $cart) :
+            $product = $modelProduct->where('id', $cart['id_product'])->first();
+            $customer = $modelAccount->where('id', $cart['id_customer'])->first();
+            $shipped = $modelShipped->where('id', $cart['shipped'])->first();
+            $price = $cart['total'] * $product['price'];
         ?>
           <td>
             <div class="d-flex align-items-center">
@@ -67,7 +68,10 @@ $modelShipped = new modelShipped();
               Deliver
             </a>
           </td>
-        <?php endforeach; ?>
+        <?php
+          endforeach;
+        endif;
+        ?>
       </tr>
     </tbody>
   </table>
