@@ -177,7 +177,7 @@
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><a class="text-decoration-none" href="<?= base_url('shop/Fresh'); ?>">Fresh Vegetable</a></li>
-                        <li><a class="text-decoration-none" href="<?= base_url('shop/Coocked'); ?>">Cooked Vegetable</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url('shop/Cooked'); ?>">Cooked Vegetable</a></li>
                         <li><a class="text-decoration-none" href="<?= base_url('shop/Side'); ?>">Side Dishes</a></li>
                     </ul>
                 </div>
