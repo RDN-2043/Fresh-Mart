@@ -40,17 +40,21 @@ $routes->get('/signin', 'ControllerAccount::signIn');
 $routes->get('/signup', 'ControllerAccount::signUp');
 
 $routes->get('/dashboard', 'ControllerShop::dashboard');
+$routes->get('/about', 'ControllerShop::about');
 $routes->get('/shop', 'ControllerShop::shop/');
 $routes->get('/shop/(:any)', 'ControllerShop::shop/$1');
+$routes->get('/contact', 'ControllerShop::contact');
 $routes->get('/shop-single/(:any)', 'ControllerShop::shopSingle/$1');
 $routes->get('/cart', 'ControllerShop::cart');
 $routes->get('/profile', 'ControllerShop::profile');
 $routes->get('/stock', 'ControllerShop::stock');
 $routes->get('/addproduct', 'ControllerShop::addProduct');
-$routes->post('/addnewproduct', 'ControllerShop::addNewProduct');
 
 $routes->post('/signingin', 'ControllerAccount::signingIn');
 $routes->post('/signingup', 'ControllerAccount::signingUp');
+
+$routes->post('/addnewproduct', 'ControllerShop::addNewProduct');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

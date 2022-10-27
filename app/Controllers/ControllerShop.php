@@ -35,6 +35,15 @@ class ControllerShop extends BaseController
         return view('content/viewDashboard', $data);
     }
 
+    public function about()
+    {
+        $data = [
+            'title' => 'About Us'
+        ];
+
+        return view('content/viewAbout', $data);
+    }
+
     public function shop($type)
     {
         $listProduct = $this->modelProduct->findAll();
@@ -47,6 +56,15 @@ class ControllerShop extends BaseController
         ];
 
         return view('content/viewShop', $data);
+    }
+
+    public function contact()
+    {
+        $data = [
+            'title' => 'Contact Us'
+        ];
+
+        return view('content/viewContact', $data);
     }
 
     public function shopSingle($id)

@@ -83,13 +83,13 @@
                             <a class="nav-link" href="<?= base_url('dashboard'); ?>">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="<?= base_url('about'); ?>">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('shop'); ?>">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="<?= base_url('contact'); ?>">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -105,25 +105,27 @@
                     <?php
                     if (!empty($account)) {
                         if ($account['type'] == 'Customer') {
-                            $redirectTo = 'shop';
+                            $redirectTo = 'cart';
                         } else {
                             $redirectTo = 'stock';
                         }
                     } else {
-                        $redirectTo = 'shop';
+                        $redirectTo = 'cart';
                     }
                     ?>
                     <a class="nav-icon position-relative text-decoration-none" href="<?= base_url($redirectTo); ?>">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
                             <?php
-                            if ($account['type'] == "Customer") {
-                                if(!empty($listCartProduct)) {
-                                    echo count($listCartProduct);
-                                }
-                            } else if ($account['type'] == "Seller") {
-                                if (!empty($listShippedProduct)) {
-                                    echo count($listShippedProduct);
+                            if(!empty($account)) {
+                                if ($account['type'] == "Customer") {
+                                    if (!empty($listCartProduct)) {
+                                        echo count($listCartProduct);
+                                    }
+                                } else if ($account['type'] == "Seller") {
+                                    if (!empty($listShippedProduct)) {
+                                        echo count($listShippedProduct);
+                                    }
                                 }
                             }
                             ?>
@@ -184,9 +186,9 @@
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><a class="text-decoration-none" href="<?= base_url('dashboard'); ?>">Home</a></li>
-                        <li><a class="text-decoration-none" href="<?= base_url(); ?>">About Us</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url('about'); ?>">About Us</a></li>
                         <li><a class="text-decoration-none" href="<?= base_url('shop'); ?>">Shop</a></li>
-                        <li><a class="text-decoration-none" href="<?= base_url(); ?>">Contact</a></li>
+                        <li><a class="text-decoration-none" href="<?= base_url('contact'); ?>">Contact</a></li>
                     </ul>
                 </div>
 
