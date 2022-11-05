@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2022 at 06:14 AM
+-- Generation Time: Oct 31, 2022 at 03:14 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -128,7 +128,14 @@ INSERT INTO `table_product` (`id`, `title`, `description`, `type`, `available`, 
 (21, 'Rendang', 'Rendang merupakan lauk terenak dan terlezat, ayo coba ditoko kami.', 'Side', 3, 5, 75000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259302628540476/rendang.png', 3),
 (56, 'Ayam Kremes Cabe Ijo', 'Ayam Kremes Cabe Ijo kami merupakan ayam terlezat di tahun 2022 ini!', 'Side', 10, 3, 15000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259154179530762/Ayam_cabe_ijo.png', 6),
 (57, 'Tumis Petai', 'Sayur tumis ditempat kami merupakan sayur terbaik yang pernah ada, ayo cobain!', 'Cooked', 13, 4, 5000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259345980858408/Tumis.png', 3),
-(58, 'Sayur Asem', 'Sayur tumis ditempat kami merupakan sayur terbaik yang pernah ada, ayo cobain!', 'Cooked', 9, 5, 6500, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259301563191306/sayur_asem.png', 6);
+(58, 'Sayur Asem', 'Sayur tumis ditempat kami merupakan sayur terbaik yang pernah ada, ayo cobain!', 'Cooked', 9, 5, 6500, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259301563191306/sayur_asem.png', 6),
+(59, 'Udang Saus Padang', 'Bosen sama udang goreng tepung? cobain ini dong kakak, dijamin wenakk polll....', 'Side', 17, 5, 30000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036634507782144030/Udang_saus_padang.png', 7),
+(60, 'Tumis Toge', 'Sayur murah, lezat dan tentunya bergizi', 'Cooked', 12, 4, 5000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638578479996948/tumis_toge.png', 6),
+(61, 'Sop Wortel Iga', 'Sop premium dan tentungnya harga miring', 'Cooked', 10, 5, 15000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638578970738728/Sop_Iga.png', 3),
+(62, 'Soto Ayam Jeruk Nipis', 'Kamu bosen dengan makanan yang tidak ada kuahnya, ini solusinya, ayo cobain...', 'Side', 14, 4, 13000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638579545350144/soto_ayam_jeruk.png', 3),
+(63, 'Soto Daging', 'Soto ini dimasak dengan sentuhan mewah dan tentunya kalian tidak perlu takut dengan harga mahal, mari cobain...', 'Side', 16, 5, 22000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638578064752660/soto.png', 6),
+(64, 'Sayur Pecel', 'Sayur sejeta umat dengan rasa yang berbeda dari yang lain, tunggu apalagi gasken beli...', 'Cooked', 14, 3, 12000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036643729831903312/sayur_pecel.png', 6),
+(65, 'Capcay', 'Capcay dengan paduan baso dan udang yang sungguh menggiurkan', 'Cooked', 10, 5, 10000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036643730372956291/Capcay.png', 7);
 
 -- --------------------------------------------------------
 
@@ -216,7 +223,7 @@ ALTER TABLE `table_cart`
 -- AUTO_INCREMENT for table `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `table_shipped`
