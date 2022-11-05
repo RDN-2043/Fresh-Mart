@@ -107,7 +107,7 @@
                         if ($account['type'] == 'Customer') {
                             $redirectTo = 'cart';
                         } else {
-                            $redirectTo = 'stock';
+                            $redirectTo = 'stock/product';
                         }
                     } else {
                         $redirectTo = 'cart';
@@ -115,22 +115,35 @@
                     ?>
                     <a class="nav-icon position-relative text-decoration-none" href="<?= base_url($redirectTo); ?>">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
-                            <?php
-                            if(!empty($account)) {
-                                if ($account['type'] == "Customer") {
-                                    if (!empty($listCartProduct)) {
-                                        echo count($listCartProduct);
-                                    }
-                                } else if ($account['type'] == "Seller") {
-                                    if (!empty($listShippedProduct)) {
-                                        echo count($listShippedProduct);
-                                    }
+                        <?php
+                        echo "<span class='position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark'>";
+                        if (!empty($account)) {
+                            if ($account['type'] == "Customer") {
+                                if (!empty($listCartProduct)) {
+                                    echo count($listCartProduct);
+                                }
+                            } else if ($account['type'] == "Seller") {
+                                if (!empty($listShippedProduct)) {
+                                    echo count($listShippedProduct);
                                 }
                             }
-                            ?>
-                        </span>
+                        }
+                        echo "</span>";
+                        ?>
                     </a>
+                    <?php
+                    if (!empty($account)) {
+                        if ($account['type'] == "Seller") {
+                            echo "<a class='nav-icon position-relative text-decoration-none' href='/stock/transaction'><i class='fas fa-box'></i></a>";
+
+                            echo "<span class='position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark'>";
+                            if (!empty($listShippedProduct)) {
+                                echo count($listShippedProduct);
+                            }
+                            echo "</span>";
+                        }
+                    }
+                    ?>
                     <?php
                     if (empty($account)) {
                         $redirectTo = "signin";

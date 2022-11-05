@@ -1,26 +1,22 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<script>
-    var qty = 0;
-
-    function BtnQuantityIncrease() {
-        qty++;
-
-        document.getElementById('quantity').value = qty;
-    }
-
-    function BtnQuantityDecrease() {
-        qty--;
-
-        document.getElementById('quantity').value = qty;
-    }
-</script>
 <?php
+
 use App\Models\modelAccount;
 
 $modelAccount = new modelAccount();
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['account'])) {
+    $account = $_SESSION['account'];
+}
+
 ?>
+
 <section class="bg-light">
     <div class="container pb-5">
         <div class="row">
@@ -33,6 +29,7 @@ $modelAccount = new modelAccount();
                 <div class="card">
                     <div class="card-body">
                         <h1 class="h2"><?= $product['title']; ?></h1>
+                        <p>Stock : <?= $product['available']; ?></p>
                         <p class="h3 py-2">Rp.<?= $product['price']; ?></p>
                         <p class="py-2">
                             <?php
@@ -60,24 +57,30 @@ $modelAccount = new modelAccount();
                         </ul>
                         <h6>Description:</h6>
                         <p><?= $product['description']; ?></p>
-                        <form action="" method="post">
+                        <form action="<?= base_url('addToCart'); ?>" method="post">
                             <input type="hidden" name="product-title" value="Activewear">
                             <div class="row">
                                 <div class="col-auto">
                                     <ul class="list-inline pb-3">
+                                        <input type="hidden" name="id_product" value="<?= $product['id']; ?>">
+                                        <br>
                                         <li class="list-inline-item text-right">
                                             Quantity
-                                            <input type="hidden" name="product-quanity" id="product-quanity" value="1">
                                         </li>
-                                        <li class="list-inline-item"><button onclick="BtnQuantityDecrease();" class="btn btn-success">-</button></li>
-                                        <li class="list-inline-item"><input class="badge bg-secondary" id="quantity" type="text" name="quantity" value="0">0</input></li>
-                                        <li class="list-inline-item"><button onclick="BtnQuantityIncrease();" class="btn btn-success">+</button></li>
-                                    </ul>
+                                        <li class="list-inline-item"><input type="number" name="quantity" class="form-control input-number" value="1" min="1" max="<?= $product['available']; ?>"></li>
                                 </div>
                             </div>
                             <div class="row pb-3">
                                 <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit">Add To Cart</button>
+                                    <?php
+                                    if (!empty($account)) {
+                                        if ($account['type'] == "Customer") {
+                                            echo "<button type='submit' class='btn btn-success btn-lg' name='submit'>Add To Cart</button>";
+                                        } else if ($account['type'] == "Seller") {
+                                            echo "<a class='btn btn-success btn-lg' href='/profile'>Change To Customer Account</a>";
+                                        }
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </form>

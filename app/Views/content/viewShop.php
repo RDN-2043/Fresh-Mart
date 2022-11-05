@@ -22,8 +22,8 @@
         <div class="row">
             <?php
             foreach ($listProduct as $product) :
-                if(!empty($type)){
-                    if($product['type'] != $type){
+                if (!empty($type)) {
+                    if ($product['type'] != $type) {
                         continue;
                     }
                 }
@@ -37,7 +37,6 @@
                             <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                 <ul class="list-unstyled">
                                     <li><a class="btn btn-success text-white mt-2" href="<?= base_url('shop-single/' . $product['id']); ?>"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>

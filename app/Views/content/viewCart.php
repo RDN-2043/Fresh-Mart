@@ -3,11 +3,13 @@
 <?= $this->section('content'); ?>
 <?php
 
+use App\Models\modelAccount;
 use App\Models\modelCart;
 use App\Models\modelProduct;
 
 $modelProduct = new modelProduct();
 $modelCart = new modelCart();
+$modelAkun = new modelAccount();
 $account = null;
 
 if (session_status() === PHP_SESSION_NONE) {
@@ -16,10 +18,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 if (isset($_SESSION['account'])) {
     $account = $_SESSION['account'];
-}
-
-if (!empty($account) && $account['type'] == "Customer") {
-    $listCartProduct = $modelCart->where('id_customer', $account['id'])->findAll();
 }
 
 ?>
@@ -46,6 +44,7 @@ if (!empty($account) && $account['type'] == "Customer") {
                             if (!empty($listCartProduct)) :
                                 foreach ($listCartProduct as $productCart) :
                                     $product = $modelProduct->where('id', $productCart['id_product'])->first();
+                                    $seller = $modelAkun->where('id', $product['id_seller'])->first()['username'];
                                     $totalPrice = $product['price'] * $productCart['total'];
                                     $totalCartPrice = $totalCartPrice + $totalPrice;
                             ?>
@@ -61,7 +60,7 @@ if (!empty($account) && $account['type'] == "Customer") {
                                     <div class="col-md-2 d-flex justify-content-center">
                                         <div>
                                             <p class="small text-muted mb-4 pb-2">Seller</p>
-                                            <p class="lead fw-normal mb-0"><?= $product['seller']; ?></p>
+                                            <p class="lead fw-normal mb-0"><?= $seller; ?></p>
                                         </div>
                                     </div>
                                     <div class="col-md-2 d-flex justify-content-center">
@@ -116,7 +115,7 @@ if (!empty($account) && $account['type'] == "Customer") {
                     <a class="btn btn-light btn-lg me-2" href="<?= base_url($redirectTo); ?>"><?= $name; ?></a>
 
                     <?php if (!empty($listCartProduct)) : ?>
-                        <a class="btn btn-primary btn-lg" href="">Buy</a>
+                        <a class="btn btn-primary btn-lg" href="<?= base_url('buy'); ?>">Buy</a>
                     <?php endif; ?>
                 </div>
 

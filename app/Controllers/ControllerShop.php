@@ -103,21 +103,42 @@ class ControllerShop extends BaseController
         return view('content/viewProfile', $data);
     }
 
-    public function stock()
+    public function stockProduct()
     {
         $data = [
             'title' => 'Product Stock',
-            'listShippedProduct' => $this->GetListShipped(),
+            'type' => 'Product',
             'listCartProduct' => $this->GetListCartProduct()
         ];
 
         return view('content/viewProductStock', $data);
     }
 
+    public function stockTransaction()
+    {
+        $data = [
+            'title' => 'Product Stock',
+            'type' => 'Transaction',
+            'listShippedProduct' => $this->GetListShipped()
+        ];
+
+        return view('content/viewTransaction', $data);
+    }
+
     public function addProduct()
     {
         $data = [
             'title' => 'Add Product'
+        ];
+
+        return view('content/viewAddProduct', $data);
+    }
+
+    public function updateProduct($productId)
+    {
+        $data = [
+            'title' => 'Add Product',
+            'productId' => $productId
         ];
 
         return view('content/viewAddProduct', $data);
@@ -144,7 +165,64 @@ class ControllerShop extends BaseController
             'id_seller' => $account['id']
         ]);
 
-        return redirect()->to('/stock');
+        return redirect()->to('/stock/product');
+    }
+
+    public function addToCart()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_SESSION['account'])) {
+            $account = $_SESSION['account'];
+        }
+
+        $id_product = $this->request->getVar('id_product');
+        $total = $this->request->getVar('quantity');
+        $qty = $this->modelProduct->where('id', $id_product)->first()['available'];
+
+        $this->modelCart->save([
+            'id_customer' => $account['id'],
+            'id_product' => $id_product,
+            'total' => $total,
+            'shipped' => 0
+        ]);
+
+        $this->modelProduct->save([
+            'id' => $id_product,
+            'available' => $qty - $total
+        ]);
+
+        return redirect()->to('/shop-single/' . $id_product);
+    }
+
+    public function deliver($shipped_id){
+        $this->modelShipped->save([
+            'id' => $shipped_id,
+            'delivered' => 1
+        ]);
+
+        return redirect()->to('/stock/transaction');
+    }
+
+    public function buy()
+    {
+        $listCart = $this->GetListCartProduct();
+
+        foreach($listCart as $cart){
+            $this->modelShipped->save([
+                'id_cart' => $cart['id'],
+                'delivered' => 0
+            ]);
+
+            $this->modelCart->save([
+                'id' => $cart['id'],
+                'shipped' => 1
+            ]);
+        }
+
+        return redirect()->to('/cart');
     }
 
     private function GetListCartProduct(){
@@ -162,7 +240,7 @@ class ControllerShop extends BaseController
         {
             if ($account['type'] == "Customer")
             {
-                $listCartProduct = $this->modelCart->where('id_customer', $account['id'], 'shipped', 0)->findAll();
+                $listCartProduct = $this->modelCart->where('id_customer', $account['id'])->where('shipped', 0)->findAll();
             }
             else
             {

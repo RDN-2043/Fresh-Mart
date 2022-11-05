@@ -11,6 +11,14 @@ $modelProduct = new modelProduct();
 $modelAccount = new modelAccount();
 $modelShipped = new modelShipped();
 
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+if (isset($_SESSION['account'])) {
+  $account = $_SESSION['account'];
+}
+
 ?>
 <br>
 <div class="d-flex justify-content-end">
@@ -21,58 +29,53 @@ $modelShipped = new modelShipped();
   <table class="table align-middle mb-0 bg-white">
     <thead class="bg-light">
       <tr>
-        <th>Product</th>
-        <th>Customer</th>
-        <th>Date</th>
-        <th>Qty</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Available</th>
+        <th>Star</th>
         <th>Price</th>
-        <th>Status</th>
-        <th>Actions</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="table-warning">
-        <?php
-        if (!empty($listShippedProduct)) :
-          foreach ($listShippedProduct as $cart) :
-            $product = $modelProduct->where('id', $cart['id_product'])->first();
-            $customer = $modelAccount->where('id', $cart['id_customer'])->first();
-            $shipped = $modelShipped->where('id', $cart['shipped'])->first();
-            $price = $cart['total'] * $product['price'];
-        ?>
-          <td>
-            <div class="d-flex align-items-center">
-              <img src="<?= $product['imgLink']; ?>" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
-              <div class="ms-3">
-                <p class="fw-bold mb-1"><?= $product['title']; ?></p>
-              </div>
-            </div>
-          </td>
-          <td>
-            <p class="fw-normal mb-1"><?= $customer['name']; ?></p>
-          </td>
-          <td>
-            <p class="fw-normal mb-1"><?= $shipped['created_at']; ?></p>
-          </td>
-          <td>
-            <p class="fw-normal mb-1"><?= $cart['total']; ?></p>
-          </td>
-          <td>
-            <p class="fw-normal mb-1"><?= $price; ?></p>
-          </td>
-          <td>
-            <p class="fw-normal mb-1">Waiting</p>
-          </td>
-          <td>
-            <a type="button" class="btn btn-success btn-rounded">
-              Deliver
-            </a>
-          </td>
-        <?php
-          endforeach;
-        endif;
-        ?>
-      </tr>
+      <?php
+      if (!empty($listCartProduct)) :
+        foreach ($listCartProduct as $cart) :
+      ?>
+          <tr>
+            <td>
+              <img src="<?= $cart['imgLink']; ?>" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+            </td>
+            <td>
+              <p class="fw-normal mb-1"><?= $cart['title']; ?></p>
+            </td>
+            <td>
+              <p class="fw-normal mb-1"><?= $cart['description']; ?></p>
+            </td>
+            <td>
+              <p class="fw-normal mb-1"><?= $cart['type']; ?></p>
+            </td>
+            <td>
+              <p class="fw-normal mb-1"><?= $cart['available']; ?></p>
+            </td>
+            <td>
+              <p class="fw-normal mb-1"><?= $cart['star']; ?></p>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">Rp.<?= $cart['price']; ?></p>
+            </td>
+            <td>
+              <a class="btn btn-success btn-rounded" href="<?= base_url('updateProduct/' . $cart['id']); ?>">
+                Update
+              </a>
+            </td>
+          </tr>
+      <?php
+        endforeach;
+      endif;
+      ?>
     </tbody>
   </table>
 </div>

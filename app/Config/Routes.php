@@ -47,13 +47,18 @@ $routes->get('/contact', 'ControllerShop::contact');
 $routes->get('/shop-single/(:any)', 'ControllerShop::shopSingle/$1');
 $routes->get('/cart', 'ControllerShop::cart');
 $routes->get('/profile', 'ControllerShop::profile');
-$routes->get('/stock', 'ControllerShop::stock');
+$routes->get('/stock/product', 'ControllerShop::stockProduct');
+$routes->get('/stock/transaction', 'ControllerShop::stockTransaction');
 $routes->get('/addproduct', 'ControllerShop::addProduct');
+$routes->get('/updateProduct/(:any)', 'ControllerShop::updateProduct/$1');
+$routes->get('/deliver/(:any)', 'ControllerShop::deliver/$1');
+$routes->get('/buy', 'ControllerShop::buy');
 
 $routes->post('/signingin', 'ControllerAccount::signingIn');
 $routes->post('/signingup', 'ControllerAccount::signingUp');
 
 $routes->post('/addnewproduct', 'ControllerShop::addNewProduct');
+$routes->post('/addToCart', 'ControllerShop::addToCart');
 
 /*
  * --------------------------------------------------------------------
