@@ -13,6 +13,7 @@ $qty = "";
 $desc = "";
 $type = "Fresh";
 $img = "";
+$redirectTo = "addnewproduct";
 
 if (!empty($productId)) {
     $product = $modelProduct->where('id', $productId)->first();
@@ -23,6 +24,7 @@ if (!empty($productId)) {
     $desc = $product['description'];
     $type = $product['type'];
     $img = $product['imgLink'];
+    $redirectTo = "updateexistingproduct";
 }
 ?>
 
@@ -33,7 +35,8 @@ if (!empty($productId)) {
                 <h1 class="text-white mb-4">New Product</h1>
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body">
-                        <form action="<?= base_url('addnewproduct'); ?>" method="post">
+                        <form action="<?= base_url($redirectTo); ?>" method="post">
+                            <input type="hidden" name="productId" value="<?= $productId; ?>">
                             <div class="row align-items-center pt-4 pb-3">
                                 <div class="col-md-3 ps-5">
                                     <h6 class="mb-0">Title</h6>

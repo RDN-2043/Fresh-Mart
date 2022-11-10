@@ -168,6 +168,31 @@ class ControllerShop extends BaseController
         return redirect()->to('/stock/product');
     }
 
+    public function updateExistingProduct()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_SESSION['account'])) {
+            $account = $_SESSION['account'];
+        }
+        
+        $this->modelProduct->save([
+            'id' => $this->request->getVar('productId'),
+            'title' => $this->request->getVar('title'),
+            'description' => $this->request->getVar('desc'),
+            'type' => $this->request->getVar('type'),
+            'available' => $this->request->getVar('qty'),
+            'star' => 0,
+            'price' => $this->request->getVar('price'),
+            'imgLink' => $this->request->getVar('imgLink'),
+            'id_seller' => $account['id']
+        ]);
+
+        return redirect()->to('/stock/product');
+    }
+
     public function addToCart()
     {
         if (session_status() === PHP_SESSION_NONE) {

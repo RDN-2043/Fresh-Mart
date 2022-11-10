@@ -1,0 +1,3 @@
+CRITICAL - 2022-11-09 22:28:23 --> Cannot use empty array elements in arrays
+in APPPATH\Controllers\ControllerShop.php on line 182.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

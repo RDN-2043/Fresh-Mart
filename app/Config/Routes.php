@@ -58,6 +58,7 @@ $routes->post('/signingin', 'ControllerAccount::signingIn');
 $routes->post('/signingup', 'ControllerAccount::signingUp');
 
 $routes->post('/addnewproduct', 'ControllerShop::addNewProduct');
+$routes->post('/updateexistingproduct', 'ControllerShop::updateExistingProduct');
 $routes->post('/addToCart', 'ControllerShop::addToCart');
 
 /*
