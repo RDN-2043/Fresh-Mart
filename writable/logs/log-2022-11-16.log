@@ -1,0 +1,12 @@
+CRITICAL - 2022-11-16 21:32:18 --> Undefined variable $productId
+in APPPATH\Views\content\viewAddProduct.php on line 39.
+ 1 APPPATH\Views\content\viewAddProduct.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productId', 'APPPATH\\Views\\content\\viewAddProduct.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewAddProduct.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewAddProduct', [], true)
+ 5 APPPATH\Controllers\ControllerShop.php(134): view('content/viewAddProduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerShop->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerShop))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

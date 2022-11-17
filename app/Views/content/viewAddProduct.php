@@ -13,6 +13,7 @@ $qty = "";
 $desc = "";
 $type = "Fresh";
 $img = "";
+$btnName = "Add Product";
 $redirectTo = "addnewproduct";
 
 if (!empty($productId)) {
@@ -24,6 +25,7 @@ if (!empty($productId)) {
     $desc = $product['description'];
     $type = $product['type'];
     $img = $product['imgLink'];
+    $btnName = "Update Product";
     $redirectTo = "updateexistingproduct";
 }
 ?>
@@ -36,7 +38,7 @@ if (!empty($productId)) {
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body">
                         <form action="<?= base_url($redirectTo); ?>" method="post">
-                            <input type="hidden" name="productId" value="<?= $productId; ?>">
+                            <input type="hidden" name="productId" value="<?php if(!empty($productId)) {echo $productId;} ?>">
                             <div class="row align-items-center pt-4 pb-3">
                                 <div class="col-md-3 ps-5">
                                     <h6 class="mb-0">Title</h6>
@@ -96,7 +98,7 @@ if (!empty($productId)) {
                             </div>
                             <hr class="mx-n3">
                             <div class="px-5 py-4">
-                                <button type="submit" class="btn btn-primary btn-lg">Add product</button>
+                                <button type="submit" class="btn btn-primary btn-lg"><?= $btnName; ?></button>
                             </div>
                         </form>
                     </div>
