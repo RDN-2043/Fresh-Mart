@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2022 at 03:14 PM
+-- Generation Time: Nov 17, 2022 at 05:13 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -66,7 +66,8 @@ INSERT INTO `table_account` (`id`, `name`, `username`, `password`, `type`, `crea
 (7, 'Bu Rohmah', 'seller3', 'seller3', 'Seller', '2022-10-15 16:39:36', '2022-10-15 16:39:36', '2022-10-15 16:39:36'),
 (8, '', 'pass1', '$2y$10$F8ZsDtHd.iXWtnpaqBOSCumFpd5r3Om3SQC.aBWpV6dffQc42cuR.', 'Seller', '2022-10-23 05:15:19', '2022-10-23 05:15:19', '0000-00-00 00:00:00'),
 (9, 'pass2', 'pass2', '$2y$10$5zr1PccPKuZf/nI1GAtnoeopzTDKiHjE4gOgN4wcV4qquwu4P2YnO', 'Seller', '2022-10-23 05:17:57', '2022-10-23 05:17:57', '0000-00-00 00:00:00'),
-(10, 'Padil', 'padil1', '$2y$10$7M8Jb3TCIFnd6fT752rnd.cv0V1zMxYjwaljJh6cwQMiiSeIaI/AK', 'Customer', '2022-10-26 21:20:53', '2022-10-26 21:20:53', '0000-00-00 00:00:00');
+(10, 'Padil', 'padil1', '$2y$10$7M8Jb3TCIFnd6fT752rnd.cv0V1zMxYjwaljJh6cwQMiiSeIaI/AK', 'Customer', '2022-10-26 21:20:53', '2022-10-26 21:20:53', '0000-00-00 00:00:00'),
+(11, 'rizki', 'rizki1', '$2y$10$8hp0v9EcjFxArnB6qir4mOvBnFofrS3x01dR3fU0sAsujL.B5XM0O', 'Seller', '2022-11-02 23:32:56', '2022-11-02 23:32:56', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,18 @@ CREATE TABLE `table_cart` (
 --
 
 INSERT INTO `table_cart` (`id`, `id_customer`, `id_product`, `total`, `shipped`) VALUES
-(1, 3, 3, 3, 1);
+(1, 3, 3, 3, 1),
+(2, 10, 6, 1, 1),
+(3, 10, 7, 11, 1),
+(4, 10, 11, 1, 1),
+(5, 10, 6, 2, 1),
+(6, 10, 11, 1, 1),
+(7, 10, 11, 1, 1),
+(8, 10, 58, 2, 1),
+(9, 10, 58, 2, 1),
+(10, 10, 3, 1, 1),
+(11, 10, 58, 1, 1),
+(12, 10, 66, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -112,12 +124,12 @@ CREATE TABLE `table_product` (
 --
 
 INSERT INTO `table_product` (`id`, `title`, `description`, `type`, `available`, `star`, `price`, `imgLink`, `id_seller`) VALUES
-(3, 'Ayam Krispy', 'Kfc, MCD, AW??, Lewat boss, punya kami adalah yang terbaik!', 'Side', 10, 5, 10000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259155332976640/Ayam_krispi.png', 3),
-(6, 'Bayem', 'Ayo dapatkan sayur dengan harga murah untuk setiap pembeli yang membeli di toko kami.', 'Fresh', 10, 4, 4000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259156020826113/bayem.png', 6),
-(7, 'Ayam Goreng', 'Terjual ribuan, ayam goreng ini terbukti bikin ketagihan.', 'Side', 13, 4, 12000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259154770919434/ayam_goreng.png', 7),
+(3, 'Ayam Krispy', 'Kfc, MCD, AW??, Lewat boss, punya kami adalah yang terbaik!', 'Side', 9, 5, 10000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259155332976640/Ayam_krispi.png', 3),
+(6, 'Bayem', 'Ayo dapatkan sayur dengan harga murah untuk setiap pembeli yang membeli di toko kami.', 'Fresh', 7, 4, 4000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259156020826113/bayem.png', 6),
+(7, 'Ayam Goreng', 'Terjual ribuan, ayam goreng ini terbukti bikin ketagihan.', 'Side', 2, 4, 12000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259154770919434/ayam_goreng.png', 7),
 (8, 'Brokoli', 'Ayo dapatkan sayur dengan harga murah untuk setiap pembeli yang membeli di toko kami.', 'Fresh', 9, 3, 10000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259156478001233/brokoli.png', 6),
 (10, 'Jagung Manis', 'Beli sayur di toko kami, satu-satunya toko yang menjual sayur dengan fresh, sesuai dengan nama toko kami.', 'Fresh', 10, 4, 7200, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259215890325524/Jagung_Manis.png\r\n', 7),
-(11, 'Labusiem', 'Kesempatan terbatas, cuma hari ini! Promo sayur ini, hanya di toko kami.', 'Fresh', 13, 3, 4000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259215496069160/Labusiem.png', 7),
+(11, 'Labusiem', 'Kesempatan terbatas, cuma hari ini! Promo sayur ini, hanya di toko kami.', 'Fresh', 10, 3, 4000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259215496069160/Labusiem.png', 7),
 (12, 'Jahe', 'Jahe merupakan obat sekaligus rempah - rempah yang sangat baik, mari beli di toko kami.\r\n', 'Fresh', 17, 4, 3500, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259216339120148/jahe.png', 3),
 (14, 'Jamur ', 'Ayo dapatkan jamur dengan harga murah untuk kalian masak dirumah.\r\n', 'Fresh', 18, 5, 2500, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259216838246410/Jamur.png', 6),
 (15, 'Timun', 'Timun merupakan sayur banyak mengandung mineral, jadi tunggu apalagi, mari beli!', 'Fresh', 2, 3, 50000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259344806453298/Timun.png', 3),
@@ -128,14 +140,15 @@ INSERT INTO `table_product` (`id`, `title`, `description`, `type`, `available`, 
 (21, 'Rendang', 'Rendang merupakan lauk terenak dan terlezat, ayo coba ditoko kami.', 'Side', 3, 5, 75000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259302628540476/rendang.png', 3),
 (56, 'Ayam Kremes Cabe Ijo', 'Ayam Kremes Cabe Ijo kami merupakan ayam terlezat di tahun 2022 ini!', 'Side', 10, 3, 15000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259154179530762/Ayam_cabe_ijo.png', 6),
 (57, 'Tumis Petai', 'Sayur tumis ditempat kami merupakan sayur terbaik yang pernah ada, ayo cobain!', 'Cooked', 13, 4, 5000, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259345980858408/Tumis.png', 3),
-(58, 'Sayur Asem', 'Sayur tumis ditempat kami merupakan sayur terbaik yang pernah ada, ayo cobain!', 'Cooked', 9, 5, 6500, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259301563191306/sayur_asem.png', 6),
+(58, 'Sayur Asem', 'Sayur tumis ditempat kami merupakan sayur terbaik yang pernah ada, ayo cobain!', 'Cooked', 4, 5, 6500, 'https://cdn.discordapp.com/attachments/776404266767745034/1032259301563191306/sayur_asem.png', 6),
 (59, 'Udang Saus Padang', 'Bosen sama udang goreng tepung? cobain ini dong kakak, dijamin wenakk polll....', 'Side', 17, 5, 30000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036634507782144030/Udang_saus_padang.png', 7),
 (60, 'Tumis Toge', 'Sayur murah, lezat dan tentunya bergizi', 'Cooked', 12, 4, 5000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638578479996948/tumis_toge.png', 6),
 (61, 'Sop Wortel Iga', 'Sop premium dan tentungnya harga miring', 'Cooked', 10, 5, 15000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638578970738728/Sop_Iga.png', 3),
 (62, 'Soto Ayam Jeruk Nipis', 'Kamu bosen dengan makanan yang tidak ada kuahnya, ini solusinya, ayo cobain...', 'Side', 14, 4, 13000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638579545350144/soto_ayam_jeruk.png', 3),
 (63, 'Soto Daging', 'Soto ini dimasak dengan sentuhan mewah dan tentunya kalian tidak perlu takut dengan harga mahal, mari cobain...', 'Side', 16, 5, 22000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638578064752660/soto.png', 6),
 (64, 'Sayur Pecel', 'Sayur sejeta umat dengan rasa yang berbeda dari yang lain, tunggu apalagi gasken beli...', 'Cooked', 14, 3, 12000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036643729831903312/sayur_pecel.png', 6),
-(65, 'Capcay', 'Capcay dengan paduan baso dan udang yang sungguh menggiurkan', 'Cooked', 10, 5, 10000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036643730372956291/Capcay.png', 7);
+(65, 'Capcay', 'Capcay dengan paduan baso dan udang yang sungguh menggiurkan', 'Cooked', 10, 5, 10000, 'https://cdn.discordapp.com/attachments/776404266767745034/1036643730372956291/Capcay.png', 7),
+(66, 'Sop Iga Lezat', 'Enak nih', 'Side', 0, 0, 10, 'https://cdn.discordapp.com/attachments/776404266767745034/1036638578970738728/Sop_Iga.png', 11);
 
 -- --------------------------------------------------------
 
@@ -157,7 +170,18 @@ CREATE TABLE `table_shipped` (
 --
 
 INSERT INTO `table_shipped` (`id`, `id_cart`, `delivered`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 0, '2022-10-23 10:12:42', '2022-10-23 10:12:42', '2022-10-23 10:12:42');
+(1, 1, 0, '2022-10-23 10:12:42', '2022-10-23 10:12:42', '2022-10-23 10:12:42'),
+(2, 2, 0, '2022-11-16 19:49:52', '2022-11-16 19:49:52', '0000-00-00 00:00:00'),
+(3, 3, 0, '2022-11-16 19:50:18', '2022-11-16 19:50:18', '0000-00-00 00:00:00'),
+(4, 4, 0, '2022-11-16 19:50:18', '2022-11-16 19:50:18', '0000-00-00 00:00:00'),
+(5, 5, 0, '2022-11-16 19:52:06', '2022-11-16 19:52:06', '0000-00-00 00:00:00'),
+(6, 6, 0, '2022-11-16 19:52:06', '2022-11-16 19:52:06', '0000-00-00 00:00:00'),
+(7, 7, 0, '2022-11-16 19:52:06', '2022-11-16 19:52:06', '0000-00-00 00:00:00'),
+(8, 8, 0, '2022-11-16 22:05:45', '2022-11-16 22:05:45', '0000-00-00 00:00:00'),
+(9, 9, 0, '2022-11-16 22:05:45', '2022-11-16 22:05:45', '0000-00-00 00:00:00'),
+(10, 10, 0, '2022-11-16 22:05:45', '2022-11-16 22:05:45', '0000-00-00 00:00:00'),
+(11, 11, 0, '2022-11-16 22:05:45', '2022-11-16 22:05:45', '0000-00-00 00:00:00'),
+(12, 12, 1, '2022-11-16 22:05:45', '2022-11-16 22:06:20', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -211,25 +235,25 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `table_account`
 --
 ALTER TABLE `table_account`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `table_cart`
 --
 ALTER TABLE `table_cart`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `table_shipped`
 --
 ALTER TABLE `table_shipped`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
